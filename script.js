@@ -18,9 +18,8 @@ checkAge(15);
 
 // VAT 1
 const berekenBelasting = function (beginPrijs, hoogteBelasting) {
-    let eindPrijs = beginPrijs * hoogteBelasting;
-    console.log(eindPrijs);
-    return eindPrijs;
+    return eindPrijs = beginPrijs * hoogteBelasting;
+   
 };
 
 const totaalBedrag = function (bedrag, soortProduct) {
