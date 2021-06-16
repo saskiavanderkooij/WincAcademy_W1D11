@@ -6,7 +6,6 @@ const isAdult = function (age) {
 };
 
 const checkAge = function (age) {
-
     if (isAdult(age)) {
         console.log("Hello there");
     } else {
@@ -16,27 +15,15 @@ const checkAge = function (age) {
 
 checkAge(15);
 
-// VAT 1
 const berekenBelasting = function (beginPrijs, hoogteBelasting) {
-    return eindPrijs = beginPrijs * hoogteBelasting;
-   
+    return beginPrijs *( hoogteBelasting/ 100);  
 };
 
-const totaalBedrag = function (bedrag, soortProduct) {
-    let hoogteBelasting;
-    if (soortProduct == "food") {
-        hoogteBelasting = 0.09;
-    } else if (soortProduct == "goederen") {
-        hoogteBelasting = 0.21;
-    } else {
-        hoogteBelasting = 0;
-    }
-    console.log(hoogteBelasting)
-    let eindbedrag = bedrag + berekenBelasting(bedrag, hoogteBelasting)
-    console.log("De prijs inclusief belasting is: " + eindbedrag);
+const totaalBedrag = function (bedrag, hoogteBelasting) {
+    return eindbedrag = bedrag + berekenBelasting(bedrag, hoogteBelasting);
 }
 
-totaalBedrag(50, null);
+console.log("De prijs inclusief belasting is: " + totaalBedrag(1000, 21));
 
 //VAT 2
 const getPriceAndVat = function (amount, tax) {
@@ -46,10 +33,5 @@ const getPriceAndVat = function (amount, tax) {
 const calculatePriceAndVat = function (amount, tax) {
     let vat = Math.round((amount - (amount / tax))*100) / 100;
     let basePrice = amount - vat;
-    const priceAndVat = [basePrice, vat];
-
-    return (priceAndVat)
+    return [basePrice, vat];
 }
-
-getPriceAndVat(2.18, 1.09);
-
