@@ -1,5 +1,5 @@
 // Hello Kiddo
-const adult = function (age) {
+const isAdult = function (age) {
     if (age >= 18) {
         return true;
     }
@@ -7,7 +7,7 @@ const adult = function (age) {
 
 const checkAge = function (age) {
 
-    if (adult(age)) {
+    if (isAdult(age)) {
         console.log("Hello there");
     } else {
         console.log("Hello kiddo");
